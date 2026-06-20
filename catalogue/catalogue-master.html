@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Service Catalogue — Swasthi Computers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind={theme:{extend:{colors:{'swasthi-blue':'#1F5FA8','swasthi-gold':'#D9A23D','swasthi-text':'#2B2622'},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @page { margin: 1.5cm; size: A4; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .badge-proven { background: #dbeafe; color: #1e40af; }
+    .badge-now { background: #fef3c7; color: #92400e; }
+    .badge-aspire { background: #e2e8f0; color: #475569; }
+    .page-break { page-break-before: always; }
+  </style>
+</head>
+<body class="bg-white text-swasthi-text font-sans text-sm leading-relaxed p-8 max-w-4xl mx-auto">
+  <header class="flex items-start justify-between border-b-2 border-swasthi-blue pb-4 mb-6">
+    <div>
+      <h1 class="text-2xl font-bold text-swasthi-blue">Swasthi <span class="text-swasthi-gold">Computers</span></h1>
+      <p class="text-xs text-gray-500 mt-1">Master Service Catalogue</p>
+    </div>
+    <div class="text-right text-xs text-gray-500">
+      <p>info@swasthicomputers.com</p>
+      <p>+91 98403 97774</p>
+      <p>Chennai, India</p>
+    </div>
+  </header>
+
+  <p class="text-gray-600 mb-8">Swasthi Computers LLP is a Chennai-based Microsoft Partner with 30+ years of IT expertise. We deliver enterprise AI adoption, cloud modernisation, data engineering, automation, security, and managed IT — with a growing focus on Industry 5.0 and predictive MRO. Below is the full scope of what we offer.</p>
+
+  <!-- Enterprise AI -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold text-swasthi-blue">Enterprise AI Adoption</h2>
+    <p class="text-gray-600 mt-1">Helping organisations adopt AI safely and effectively — from strategy through to custom model development.</p>
+    <ul class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-700">
+      <li>&bull; AI strategy & readiness assessment</li>
+      <li>&bull; Custom model development with Azure AI Foundry</li>
+      <li>&bull; Retrieval-Augmented Generation (RAG) pipelines</li>
+      <li>&bull; AI governance, safety & bias evaluation frameworks</li>
+      <li>&bull; Copilot Studio agent development</li>
+    </ul>
+    <div class="mt-2 flex gap-2">
+      <span class="badge-proven text-xs font-semibold px-2 py-0.5 rounded">Proven</span>
+      <span class="badge-now text-xs font-semibold px-2 py-0.5 rounded">Now</span>
+      <span class="badge-aspire text-xs font-semibold px-2 py-0.5 rounded">Aspire</span>
+    </div>
+  </section>
+
+  <!-- Copilot & Cloud -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold text-swasthi-blue">Microsoft Copilot & Cloud</h2>
+    <p class="text-gray-600 mt-1">Deploying and optimising Microsoft 365, Azure, and Copilot for productivity and modernisation.</p>
+    <ul class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-700">
+      <li>&bull; Microsoft 365 Copilot deployment & adoption</li>
+      <li>&bull; Azure infrastructure modernisation (IaaS & PaaS)</li>
+      <li>&bull; Azure Virtual Desktop & hybrid workplace</li>
+      <li>&bull; Microsoft 365 migrations & governance</li>
+      <li>&bull; Copilot for Sales / Service / Dynamics 365</li>
+    </ul>
+    <div class="mt-2 flex gap-2">
+      <span class="badge-proven text-xs font-semibold px-2 py-0.5 rounded">Proven</span>
+      <span class="badge-now text-xs font-semibold px-2 py-0.5 rounded">Now</span>
+    </div>
+  </section>
+
+  <!-- Data Engineering -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold text-swasthi-blue">Data Engineering & Big Data</h2>
+    <p class="text-gray-600 mt-1">Building scalable data pipelines, analytics platforms, and AI-ready data foundations.</p>
+    <ul class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-700">
+      <li>&bull; Data pipeline engineering (Azure Data Factory, Fabric)</li>
+      <li>&bull; Real-time analytics with Azure Stream Analytics</li>
+      <li>&bull; Data lake & warehouse modernisation</li>
+      <li>&bull; Microsoft Fabric & Power BI semantic modelling</li>
+      <li>&bull; Data governance & cataloguing</li>
+    </ul>
+    <div class="mt-2 flex gap-2">
+      <span class="badge-proven text-xs font-semibold px-2 py-0.5 rounded">Proven</span>
+      <span class="badge-now text-xs font-semibold px-2 py-0.5 rounded">Now</span>
+    </div>
+  </section>
+
+  <!-- Automation & AIOps -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold text-swasthi-blue">Automation & AIOps</h2>
+    <p class="text-gray-600 mt-1">Automating workflows, IT operations, and introducing AI-driven operations management.</p>
+    <ul class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-700">
+      <li>&bull; Power Automate & Power Apps workflow automation</li>
+      <li>&bull; AI-powered IT operations (AIOps)</li>
+      <li>&bull; MLOps for model lifecycle management</li>
+      <li>&bull; Predictive maintenance MRO models (Industry 5.0)</li>
+      <li>&bull; Automated monitoring & alerting pipelines</li>
+    </ul>
+    <div class="mt-2 flex gap-2">
+      <span class="badge-proven text-xs font-semibold px-2 py-0.5 rounded">Proven</span>
+      <span class="badge-aspire text-xs font-semibold px-2 py-0.5 rounded">Aspire</span>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold text-swasthi-blue">Security</h2>
+    <p class="text-gray-600 mt-1">Strengthening enterprise security posture with Microsoft security tools and zero-trust architecture.</p>
+    <ul class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-700">
+      <li>&bull; Microsoft 365 Defender deployment</li>
+      <li>&bull; Azure Sentinel & SIEM integration</li>
+      <li>&bull; Identity & access management (Entra ID)</li>
+      <li>&bull; Zero-trust architecture assessments</li>
+      <li>&bull; Compliance & data protection (Purview)</li>
+    </ul>
+    <div class="mt-2 flex gap-2">
+      <span class="badge-aspire text-xs font-semibold px-2 py-0.5 rounded">Aspire</span>
+    </div>
+  </section>
+
+  <!-- Managed IT -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold text-swasthi-blue">Managed IT Services</h2>
+    <p class="text-gray-600 mt-1">Ongoing IT support, infrastructure management, and end-user computing for growing organisations.</p>
+    <ul class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-700">
+      <li>&bull; 24/7 IT helpdesk & end-user support</li>
+      <li>&bull; Network & infrastructure monitoring</li>
+      <li>&bull; Backup, disaster recovery & business continuity</li>
+      <li>&bull; Vendor management & procurement</li>
+      <li>&bull; IT strategy & roadmap consulting</li>
+    </ul>
+    <div class="mt-2 flex gap-2">
+      <span class="badge-proven text-xs font-semibold px-2 py-0.5 rounded">Proven</span>
+      <span class="badge-now text-xs font-semibold px-2 py-0.5 rounded">Now</span>
+    </div>
+  </section>
+
+  <!-- Industry 5.0 / WindTrack -->
+  <section>
+    <h2 class="text-lg font-bold text-swasthi-blue">Industry 5.0 — WindTrack (Flagship)</h2>
+    <p class="text-gray-600 mt-1">IoT wind turbine monitoring platform — synthetic-data demo simulating 100 turbines across 5 India-realistic wind zones (Tamil Nadu, Gujarat, Maharashtra, Rajasthan, Karnataka). Streamlit dashboards with Plotly visualisations, deployed live. Next phase: predictive MRO model for component wear detection.</p>
+  </section>
+
+  <footer class="mt-8 pt-4 border-t border-gray-300 text-xs text-gray-500 text-center">
+    Swasthi Computers LLP &copy; 2026 &mdash; Microsoft Partner &mdash; info@swasthicomputers.com &mdash; +91 98403 97774
+  </footer>
+</body>
+</html>

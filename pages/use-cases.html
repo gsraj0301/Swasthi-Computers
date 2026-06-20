@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Cases — Swasthi Computers</title>
+  <meta name="description" content="Swasthi Computers use cases: WindTrack IoT monitoring (live), plus Microsoft-powered industry solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{'swasthi-blue':'#1F5FA8','swasthi-gold':'#D9A23D','swasthi-bg':'#FAF7F2','swasthi-text':'#2B2622'},fontFamily:{sans:['Inter','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="bg-swasthi-bg text-swasthi-text font-sans antialiased">
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="../index.html" class="flex items-center gap-2"><span class="text-xl font-bold text-swasthi-blue tracking-tight">Swasthi<span class="text-swasthi-gold"> Computers</span></span></a>
+        <div class="hidden lg:flex items-center gap-8">
+          <div class="mega-menu-trigger relative">
+            <button class="flex items-center gap-1 text-sm font-medium text-swasthi-text hover:text-swasthi-blue py-2">Solutions<svg class="w-3.5 h-3.5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+            <div class="mega-menu"><div class="bg-white rounded-xl shadow-xl border border-gray-100 p-6 mt-2"><div class="grid grid-cols-2 gap-x-6 gap-y-3">
+              <a href="enterprise-ai-adoption.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text hover:text-swasthi-blue">Enterprise AI Adoption</a>
+              <a href="microsoft-copilot-cloud.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text hover:text-swasthi-blue">Microsoft Copilot & Cloud</a>
+              <a href="data-engineering-big-data.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text hover:text-swasthi-blue">Data Engineering & Big Data</a>
+              <a href="automation-aiops.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text hover:text-swasthi-blue">Automation & AIOps</a>
+              <a href="security.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text hover:text-swasthi-blue">Security</a>
+              <a href="managed-it-services.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text hover:text-swasthi-blue">Managed IT Services</a>
+            </div></div></div>
+          </div>
+          <a href="industry-5-0.html" class="text-sm font-medium text-swasthi-text hover:text-swasthi-blue py-2">Industry 5.0</a>
+          <a href="use-cases.html" class="text-sm font-medium text-swasthi-text hover:text-swasthi-blue py-2" style="color:#1F5FA8;">Use Cases</a>
+          <a href="about.html" class="text-sm font-medium text-swasthi-text hover:text-swasthi-blue py-2">About</a>
+          <a href="contact.html" class="btn-accent px-5 py-2.5 rounded-lg text-sm font-semibold">Contact</a>
+        </div>
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-swasthi-bg" aria-expanded="false" aria-label="Toggle navigation"><svg class="w-6 h-6 text-swasthi-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <div><button id="mobile-solutions-toggle" class="flex items-center justify-between w-full px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text">Solutions<svg class="chevron w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div id="mobile-solutions-sub" class="hidden pl-4 mt-1 space-y-1">
+            <a href="enterprise-ai-adoption.html" class="block px-3 py-2 rounded-lg hover:bg-swasthi-bg text-sm text-swasthi-text">Enterprise AI Adoption</a>
+            <a href="microsoft-copilot-cloud.html" class="block px-3 py-2 rounded-lg hover:bg-swasthi-bg text-sm text-swasthi-text">Microsoft Copilot & Cloud</a>
+            <a href="data-engineering-big-data.html" class="block px-3 py-2 rounded-lg hover:bg-swasthi-bg text-sm text-swasthi-text">Data Engineering & Big Data</a>
+            <a href="automation-aiops.html" class="block px-3 py-2 rounded-lg hover:bg-swasthi-bg text-sm text-swasthi-text">Automation & AIOps</a>
+            <a href="security.html" class="block px-3 py-2 rounded-lg hover:bg-swasthi-bg text-sm text-swasthi-text">Security</a>
+            <a href="managed-it-services.html" class="block px-3 py-2 rounded-lg hover:bg-swasthi-bg text-sm text-swasthi-text">Managed IT Services</a>
+          </div>
+        </div>
+        <a href="industry-5-0.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text">Industry 5.0</a>
+        <a href="use-cases.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text">Use Cases</a>
+        <a href="about.html" class="block px-3 py-2.5 rounded-lg hover:bg-swasthi-bg text-sm font-medium text-swasthi-text">About</a>
+        <a href="contact.html" class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-swasthi-gold">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-swasthi-gold uppercase tracking-widest">Use Cases</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-bold text-swasthi-text">Real proof. Real potential.</h1>
+        <p class="mt-6 text-lg text-gray-600 leading-relaxed">One live deployed case study, plus illustrative industry scenarios powered by Microsoft technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WindTrack -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm font-semibold text-swasthi-gold uppercase tracking-widest">Flagship case study</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-swasthi-text">WindTrack — IoT wind turbine monitoring</h2>
+      <div class="mt-6 lg:flex lg:gap-12">
+        <div class="lg:w-2/3">
+          <p class="text-gray-600 leading-relaxed">
+            <strong>The challenge:</strong> Wind farm operators need real-time visibility into turbine health and performance across distributed assets, with the ability to detect anomalies before they lead to costly downtime.
+          </p>
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            <strong>What we built:</strong> A synthetic data generator simulating 100 turbines across India-realistic wind zones (Tamil Nadu, Gujarat, Maharashtra, Rajasthan, Karnataka). Two Streamlit dashboards — Asset Dashboard and Power Generation Dashboard — visualise turbine metrics with Plotly charts. Deployed via GitHub to Streamlit Cloud, live and accessible.
+          </p>
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            <strong>What's next:</strong> An MRO prediction ML model that transforms this from a monitoring tool into a true predictive maintenance system — detecting early signs of component wear and scheduling intervention before failure.
+          </p>
+          <div class="mt-6">
+            <a href="https://windtrack-j4l6fmrgkx5n8r9kodjgya.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3 rounded-lg text-sm font-semibold inline-block">Visit live dashboard</a>
+          </div>
+          <p class="mt-3 text-xs text-gray-400">Developed by our technical team</p>
+        </div>
+        <div class="mt-8 lg:mt-0 lg:w-1/3">
+          <div class="grid grid-cols-2 gap-2">
+            <img src="../assets/windtrack/asset_dashboard.png" alt="WindTrack Asset Dashboard" class="rounded-lg border border-gray-200 w-full" />
+            <img src="../assets/windtrack/power_dashboard.png" alt="WindTrack Power Dashboard" class="rounded-lg border border-gray-200 w-full" />
+            <img src="../assets/windtrack/asset_graphs.png" alt="WindTrack performance graphs" class="rounded-lg border border-gray-200 w-full col-span-2" />
+          </div>
+          <p class="mt-2 text-xs text-gray-500 text-center">WindTrack dashboards — developed by our technical team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry scenarios -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm font-semibold text-swasthi-gold uppercase tracking-widest">Powered by Microsoft</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-swasthi-text">Industry scenarios</h2>
+      <p class="mt-3 text-gray-600">Illustrative examples of how Microsoft AI and cloud technologies apply across sectors — from healthcare to manufacturing. These are capability scenarios, not specific client claims.</p>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-warm rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-swasthi-blue/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-swasthi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-swasthi-text">Healthcare</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">Copilot for Microsoft 365 helps clinicians reduce documentation time, while Azure AI streamlines medical imaging analysis and patient data orchestration. Dynamics 365 Customer Insights enables personalised care journeys across provider and payor systems.</p>
+          <div class="mt-3 inline-block text-xs font-semibold text-swasthi-blue bg-swasthi-blue/10 px-2 py-1 rounded">Powered by Microsoft</div>
+        </div>
+
+        <div class="card-warm rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-swasthi-blue/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-swasthi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-swasthi-text">Insurance</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">Copilot for Dynamics 365 helps underwriting and claims teams automate document review and extraction. Power Platform and Azure AI Foundry enable custom fraud detection models, while Copilot Studio powers intelligent customer service agents for policyholder queries.</p>
+          <div class="mt-3 inline-block text-xs font-semibold text-swasthi-blue bg-swasthi-blue/10 px-2 py-1 rounded">Powered by Microsoft</div>
+        </div>
+
+        <div class="card-warm rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-swasthi-blue/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-swasthi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-swasthi-text">Banking & Financial Services</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">Azure AI and Microsoft Fabric unify siloed data for risk analytics and regulatory reporting. Copilot for M365 speeds up compliance document review, while Dynamics 365 Sales and Customer Insights help relationship managers deliver personalised banking experiences.</p>
+          <div class="mt-3 inline-block text-xs font-semibold text-swasthi-blue bg-swasthi-blue/10 px-2 py-1 rounded">Powered by Microsoft</div>
+        </div>
+
+        <div class="card-warm rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-swasthi-blue/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-swasthi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-swasthi-text">Professional Services</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">Copilot for Microsoft 365 transforms how legal, consulting, and professional services firms handle proposals, research, and client communications. Power Automate streamlines intake and billing workflows, while Dynamics 365 Business Central centralises project management and financials.</p>
+          <div class="mt-3 inline-block text-xs font-semibold text-swasthi-blue bg-swasthi-blue/10 px-2 py-1 rounded">Powered by Microsoft</div>
+        </div>
+
+        <div class="card-warm rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-swasthi-blue/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-swasthi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-swasthi-text">Manufacturing</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">Azure IoT Operations and digital twins enable predictive maintenance on the factory floor — the same philosophy as WindTrack, applied to industrial machinery. Dynamics 365 Supply Chain Management and Copilot help optimise inventory, forecasting, and field service scheduling.</p>
+          <div class="mt-3 inline-block text-xs font-semibold text-swasthi-blue bg-swasthi-blue/10 px-2 py-1 rounded">Powered by Microsoft</div>
+        </div>
+
+        <div class="card-warm rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-swasthi-blue/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-swasthi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-swasthi-text">Energy & Utilities</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">Azure IoT and Digital Twins enable real-time monitoring of grid assets, pipelines, and renewable energy installations — directly connected to WindTrack's predictive MRO approach. Power BI and Azure Data Manager for Energy turn operational data into actionable insights for grid modernisation and emissions tracking.</p>
+          <div class="mt-3 inline-block text-xs font-semibold text-swasthi-blue bg-swasthi-blue/10 px-2 py-1 rounded">Powered by Microsoft</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-xl p-10 lg:p-14" style="background-color: #1F5FA8;">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Want to see what AI could do for your industry?</h2>
+          <p class="mt-4 text-blue-100 leading-relaxed">Let's discuss your specific use case.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="contact.html" class="btn-accent px-7 py-3.5 rounded-lg text-base font-semibold">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t border-gray-200 py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div><span class="text-xl font-bold text-swasthi-blue tracking-tight">Swasthi<span class="text-swasthi-gold"> Computers</span></span><p class="mt-3 text-sm text-gray-600 leading-relaxed">Chennai-based Microsoft Partner. Enterprise IT, AI, and cloud since 1993.</p><div class="mt-4"><img src="../assets/ms-partner-logo.jpeg" alt="Microsoft Partner" class="h-14 w-auto" /></div></div>
+        <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Solutions</h4><ul class="space-y-2.5 text-sm text-gray-600">
+          <li><a href="enterprise-ai-adoption.html" class="hover:text-swasthi-blue">Enterprise AI Adoption</a></li>
+          <li><a href="microsoft-copilot-cloud.html" class="hover:text-swasthi-blue">Microsoft Copilot & Cloud</a></li>
+          <li><a href="data-engineering-big-data.html" class="hover:text-swasthi-blue">Data Engineering & Big Data</a></li>
+          <li><a href="automation-aiops.html" class="hover:text-swasthi-blue">Automation & AIOps</a></li>
+          <li><a href="security.html" class="hover:text-swasthi-blue">Security</a></li>
+          <li><a href="managed-it-services.html" class="hover:text-swasthi-blue">Managed IT Services</a></li>
+        </ul></div>
+        <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Explore</h4><ul class="space-y-2.5 text-sm text-gray-600">
+          <li><a href="industry-5-0.html" class="hover:text-swasthi-blue">Industry 5.0</a></li>
+          <li><a href="use-cases.html" class="hover:text-swasthi-blue">Use Cases</a></li>
+          <li><a href="about.html" class="hover:text-swasthi-blue">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-swasthi-blue">Contact</a></li>
+          <li><a href="../catalogue/catalogue-master.pdf" download class="hover:text-swasthi-blue">Service Catalogue (PDF)</a></li>
+        </ul></div>
+        <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Contact</h4><ul class="space-y-2.5 text-sm text-gray-600"><li>Chennai, India</li><li><a href="mailto:info@swasthicomputers.com" class="hover:text-swasthi-blue">info@swasthicomputers.com</a></li><li><a href="tel:+919840397774" class="hover:text-swasthi-blue">+91 98403 97774</a></li></ul></div>
+      </div>
+      <div class="mt-10 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">&copy; 2026 Swasthi Computers LLP. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

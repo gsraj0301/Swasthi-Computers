@@ -1,0 +1,74 @@
+/* Swasthi Computers — Custom Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Mega-menu */
+.mega-menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  width: 600px;
+  z-index: 50;
+}
+
+.mega-menu-trigger:hover > .mega-menu,
+.mega-menu-trigger:focus-within > .mega-menu {
+  display: block;
+}
+
+/* Mobile nav */
+.mobile-nav-open {
+  overflow: hidden;
+}
+
+/* Utility: warm card */
+.card-warm {
+  background-color: #FAF7F2;
+  border: 1px solid #e8e2d8;
+}
+
+/* Smooth hover transitions */
+a, button {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Button base */
+.btn-primary {
+  background-color: #1F5FA8;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #1a4f8c;
+}
+
+.btn-accent {
+  background-color: #D9A23D;
+  color: white;
+}
+.btn-accent:hover {
+  background-color: #c4912e;
+}
+
+/* Footer partner logo placeholder */
+.partner-logo-placeholder {
+  border: 2px dashed #D9A23D;
+  background: #FAF7F2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #D9A23D;
+  font-size: 0.75rem;
+  text-align: center;
+  min-width: 160px;
+  min-height: 60px;
+}
