@@ -234,7 +234,7 @@ def build_pdf(data):
             ('Microsoft Copilot & Cloud', 'M365 Copilot deployment, Copilot for Dynamics 365, Azure modernisation, Azure Virtual Desktop, M365 governance, cloud adoption framework.'),
             ('Data Engineering & Big Data', 'Data pipelines (Azure Data Factory, Fabric), real-time analytics, lake/warehouse modernisation, Power BI, data governance (Purview), IoT data pipelines.'),
             ('Automation & AIOps', 'Power Automate & Power Apps, AIOps, MLOps, predictive maintenance MRO models, monitoring and alerting pipelines.'),
-            ('Security', 'Security posture assessments, M365 Defender, Entra ID, Azure Sentinel, zero-trust architecture, compliance (Purview).'),
+            ('Security', 'Security posture assessments, M365 Defender deployment, and Entra ID identity management — with emerging capability in Azure Sentinel SIEM/SOAR, zero-trust architecture, and compliance (Purview). Talk to us about your security roadmap.'),
             ('Managed IT Services', 'Helpdesk support, network/infrastructure management, backup & DR, Intune/Autopilot, IT strategy consulting, vendor management.'),
         ]
         for name, desc in services_list:
