@@ -1,4 +1,4 @@
-/* Swasthi Computers — Custom Styles */
+/* Swasthi — Custom Styles */
 
 html {
   scroll-behavior: smooth;
@@ -29,10 +29,10 @@ body {
   overflow: hidden;
 }
 
-/* Utility: warm card */
-.card-warm {
-  background-color: #FAF7F2;
-  border: 1px solid #e8e2d8;
+/* Card */
+.card-custom {
+  background-color: #FFFFFF;
+  border: 1px solid #e5e7eb;
 }
 
 /* Smooth hover transitions */
@@ -42,31 +42,23 @@ a, button {
 
 /* Button base */
 .btn-primary {
-  background-color: #1F5FA8;
+  background-color: #0AA0E4;
   color: white;
 }
 .btn-primary:hover {
-  background-color: #1a4f8c;
-}
-
-.btn-accent {
-  background-color: #D9A23D;
-  color: white;
-}
-.btn-accent:hover {
-  background-color: #c4912e;
+  background-color: #0990CC;
 }
 
 /* Footer partner logo placeholder */
 .partner-logo-placeholder {
-  border: 2px dashed #D9A23D;
-  background: #FAF7F2;
+  border: 2px dashed #0AA0E4;
+  background: #FFFFFF;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  color: #D9A23D;
+  color: #0AA0E4;
   font-size: 0.75rem;
   text-align: center;
   min-width: 160px;
