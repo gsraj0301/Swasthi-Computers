@@ -49,6 +49,15 @@ a, button {
   background-color: #0990CC;
 }
 
+/* CTA button on blue backgrounds */
+.btn-cta {
+  background-color: #FFFFFF;
+  color: #0AA0E4;
+}
+.btn-cta:hover {
+  background-color: #E8F4FD;
+}
+
 /* Footer partner logo placeholder */
 .partner-logo-placeholder {
   border: 2px dashed #0AA0E4;
