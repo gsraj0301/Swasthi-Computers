@@ -76,16 +76,34 @@ Home
 
 ---
 
-## Project 2: Uncle's Feedback (June 22, 2026) — Website v2 Changes Needed
+## Project 2: Uncle's Feedback (June 22, 2026) — Website v2
 
-### CLEAR / Actionable (no further questions needed):
-1. **Brand rename:** Every occurrence of "Swasthi Computers" → "Swasthi" (including logo, titles, meta, body copy, footer copyright — everywhere). Uncle explicitly said "Computers" reads as legacy.
-2. **Theme:** Blue & white only — remove all gold (#D9A23D) and warm off-white (#FAF7F2). Full blue/white color scheme.
-3. **Contact page:** Add two phone numbers split by purpose:
+### ✅ Completed (June 23, 2026)
+1. **Brand rename:** "Swasthi Computers" → "Swasthi" — every occurrence across all 19 HTML files (titles, meta, nav, body, footer, copyright, catalogue). Email `info@swasthicomputers.com` preserved.
+2. **Color scheme:** Blue & white only.
+   - Primary blue: `#0AA0E4` (extracted from `logo.png`)
+   - Hover blue: `#0990CC`
+   - Light blue bg: `#E8F4FD` (hover states)
+   - Removed: gold `#D9A23D`, warm off-white `#FAF7F2`, old navy `#1F5FA8`
+   - Cards: white with gray border (`card-custom`), warm bg removed
+   - Text: dark `#1A202C` for readability
+3. **Contact page:**
    - Sales: +91-9940197146
    - Support: +91-9791043399
-   - (Currently has single number +91 98403 97774)
-4. **Logo:** Pull from existing site (swasthicomputers.com) for now, replace when uncle provides.
+   - Old single number (+91 98403 97774) removed from all pages
+4. **Logo:** `assets/logo.png` placed by Raj, replaces text logo in nav + footer across all 18 pages.
+
+### 🛠 Additional Fix
+- **CTA button contrast:** Added `.btn-cta` CSS class (white bg, blue text) for buttons on the blue CTA banners. Applied to 11 CTA "Contact us"/"Email us" buttons. Nav/hero buttons stay as `.btn-primary` (blue on white).
+
+### Current Color System
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `swasthi-blue` | `#0AA0E4` | Primary brand blue — buttons, links, CTA banners |
+| `swasthi-text` | `#1A202C` | Dark text for body and headings |
+| White | `#FFFFFF` | Page backgrounds, cards, nav, footer |
+| `#E8F4FD` | Light blue | Hover states on white bg |
+| `#0990CC` | Darker blue | Button hover state |
 
 ### VAGUE / Needs uncle clarification:
 1. **"Theme is not aligning"** — could mean colors, fonts, spacing, or page-to-page inconsistency. Raj to ask: *"When you say theme isn't aligning, is it the colors, fonts, or that pages feel inconsistent with each other?"*
@@ -98,7 +116,7 @@ Home
 - "I'll push 2 versions, you pick" approach
 - Propose, don't ask him to design
 
-### Open Items (from v1, still pending):
+### Open Items (still pending):
 1. WindTrack: capacity factor realism fix (~49% → 25-35%)
 2. Deploy to Vercel / GitHub Pages for live hosting
 3. Custom domain (swasthicomputers.com or .ai domain)
