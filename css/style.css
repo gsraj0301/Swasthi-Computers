@@ -58,6 +58,16 @@ a, button {
   background-color: #E8F4FD;
 }
 
+/* Hub-and-spoke map */
+.map-line {
+  stroke-dasharray: 6 4;
+  animation: map-pulse 3s ease-in-out infinite;
+}
+@keyframes map-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
 /* Footer partner logo placeholder */
 .partner-logo-placeholder {
   border: 2px dashed #0AA0E4;
