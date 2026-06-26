@@ -123,6 +123,49 @@ Home
 
 ---
 
+### ✅ Completed (June 26, 2026) — Round 3 changes
+1. **Global Reach location map** — Hub-and-spoke SVG map (APAC, EMEA, North America → Chennai HQ) added to:
+   - **About page** — full two-column section between Microsoft Partner and Custom Software
+   - **Home page** — two-column section between WindTrack and CTA banner (enlarged from 32px icon to 300px SVG on second commit)
+   - CSS: `.map-line` class with pulse animation for connecting lines
+2. **"since 1993" → "for three decades"** — replaced across all 11 HTML files (meta descriptions, hero text, footer, managed-it page descriptions, About page story). Removed bare year reference from "founded in 1993" on About page.
+
+---
+
+### ✅ Completed (June 26, 2026) — Round 4 changes (Section 9.1-9.3)
+1. **9.1 — Added granular capability cards across 4 pages:**
+   - **Managed IT Services:** +3 cards — Custom Application Development [Proven], Infrastructure Migration & Modernization [Now], Application Migration & Modernization [Now] (6 total, `lg:grid-cols-3`)
+   - **Microsoft Copilot & Cloud:** +2 cards — Power Platform Governance [Now], M365 & Modern Workplace [Now] (8 total)
+   - **Data Engineering & Big Data:** +1 card — Microsoft Fabric [Now] with OneLake/dataflows/notebooks (4 total)
+   - **Security:** +1 card — Compliance & Risk Management [Aspire] (hedged tone, disclaimer preserved, 3 total)
+   - **No changes:** Automation & AIOps, Enterprise AI Adoption
+
+2. **9.2 — Two real booking links live:**
+   - **Contact page:** New "Book a meeting" section above email form with two buttons — "Schedule a Consulting Appointment" (Surya 30-min booking) + "Schedule Technical & Implementation Support" (Helpdesk)
+   - **Home page hero:** "Talk to an expert" replaced with "Book a Consultation" linking to Surya's booking URL. Hero stays at 2 clean buttons (book now + browse services)
+
+3. **9.3 — Microsoft source cross-reference:**
+   - Fetched 6 official Microsoft pages (Adoption, Copilot Studio, Fabric, Security, M365 Enterprise, Dynamics 365, Microsoft Foundry)
+   - **Key find:** "Azure AI Foundry" renamed to "Microsoft Foundry" — updated on Copilot & Cloud page (card title, description, meta description), Enterprise AI Adoption page (Agentic AI card), and Use Cases page (Insurance card)
+   - Enterprise AI Adoption: Agentic AI card now explicitly mentions "Microsoft Foundry with Foundry Agent Service and Copilot Studio"
+   - Fabric card confirmed accurate against Microsoft's own page
+   - Security page correctly stays generic/hedged — no specific Microsoft product claims (appropriate for [Aspire])
+
+### Hosting/Domain update (June 26)
+- **Final host:** Cloudflare Pages (free tier, commercial-use-permitted, keeps GitHub auto-deploy pipeline)
+- **Domain:** Keeping existing swasthicomputers.com (not buying .ai — too costly, 2-year minimum)
+- **DNS approach:** Single CNAME for `www` + domain forwarding at registrar — avoids touching existing email DNS (MX/SPF/DKIM). Raj & Surya handling at registrar level.
+- **Vercel rejected:** Hobby tier forbids commercial use.
+- **Replit rejected:** Credit-pool billing has surprise-bill track record.
+
+### Open Items (still pending):
+1. WindTrack: capacity factor realism fix (~49% → 25-35%)
+2. "Certified expertise" phrase on About page + Global Reach section — needs Surya to confirm certifications, or default to "deep expertise"
+3. Microsoft Partner logo file — the `ms-partner-logo.jpeg` was WhatsApp-compressed; needs higher-quality original
+4. WindTrack attribution (Raj vs. company) — still undecided
+5. Global Reach map SVG color fix needed (uses `#0AA0E4` instead of real brand colors from warm scheme)
+6. Surya's photo on About page — still undecided
+
 ### GitHub
 - Repo: `github.com/gsraj0301/Swasthi-Computers`
 - Branch: `main`
