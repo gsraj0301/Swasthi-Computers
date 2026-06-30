@@ -71,25 +71,37 @@
   <section class="py-12 lg:py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-sm font-semibold text-swasthi-blue uppercase tracking-widest">Flagship case study</p>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-swasthi-text">WindTrack — IoT wind turbine monitoring</h2>
-      <div class="mt-6 lg:flex lg:gap-12">
-        <div class="lg:w-2/3">
-          <p class="text-gray-600 leading-relaxed">
+      <div class="mt-6 lg:flex lg:gap-10">
+        <div class="lg:w-5/12">
+          <div class="rounded-xl overflow-hidden bg-gradient-to-br from-swasthi-blue to-blue-800 p-8 text-white h-full flex flex-col justify-center">
+            <div class="text-3xl font-extrabold leading-tight">100 simulated turbines</div>
+            <div class="mt-2 text-blue-200 text-sm">across India-realistic wind zones &middot; live and accessible</div>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="text-xs px-2.5 py-1 bg-white/20 text-white rounded-md font-medium">Live in production</span>
+              <span class="text-xs px-2.5 py-1 bg-white/20 text-white rounded-md font-medium">Streamlit Cloud</span>
+            </div>
+            <a href="https://windtrack-j4l6fmrgkx5n8r9kodjgya.streamlit.app" target="_blank" rel="noopener noreferrer" class="mt-6 btn-cta px-5 py-2.5 rounded-lg text-sm font-semibold text-center">Visit live dashboard &rarr;</a>
+          </div>
+        </div>
+        <div class="mt-8 lg:mt-0 lg:w-7/12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-swasthi-text">WindTrack — IoT wind turbine monitoring</h2>
+          <p class="mt-4 text-gray-600 leading-relaxed">
             <strong>The challenge:</strong> Wind farm operators need real-time visibility into turbine health and performance across distributed assets, with the ability to detect anomalies before they lead to costly downtime.
           </p>
-          <p class="mt-4 text-gray-600 leading-relaxed">
+          <p class="mt-3 text-gray-600 leading-relaxed">
             <strong>What we built:</strong> A synthetic data generator simulating 100 turbines across India-realistic wind zones (Tamil Nadu, Gujarat, Maharashtra, Rajasthan, Karnataka). Two Streamlit dashboards — Asset Dashboard and Power Generation Dashboard — visualise turbine metrics with Plotly charts. Deployed via GitHub to Streamlit Cloud, live and accessible.
           </p>
-          <p class="mt-4 text-gray-600 leading-relaxed">
+          <p class="mt-3 text-gray-600 leading-relaxed">
             <strong>What's next:</strong> An MRO prediction ML model that transforms this from a monitoring tool into a true predictive maintenance system — detecting early signs of component wear and scheduling intervention before failure.
           </p>
-          <div class="mt-6">
-            <a href="https://windtrack-j4l6fmrgkx5n8r9kodjgya.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3 rounded-lg text-sm font-semibold inline-block">Visit live dashboard</a>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-swasthi-blue/10 text-swasthi-blue rounded-md font-medium">Python</span>
+            <span class="text-xs px-2.5 py-1 bg-swasthi-blue/10 text-swasthi-blue rounded-md font-medium">Streamlit</span>
+            <span class="text-xs px-2.5 py-1 bg-swasthi-blue/10 text-swasthi-blue rounded-md font-medium">Plotly</span>
+            <span class="text-xs px-2.5 py-1 bg-swasthi-blue/10 text-swasthi-blue rounded-md font-medium">IoT</span>
           </div>
           <p class="mt-3 text-xs text-gray-400">Developed by our technical team</p>
-        </div>
-        <div class="mt-8 lg:mt-0 lg:w-1/3">
-          <div class="grid grid-cols-2 gap-2">
+          <div class="mt-4 grid grid-cols-2 gap-2">
             <img src="../assets/windtrack/asset_dashboard.png" alt="WindTrack Asset Dashboard" class="rounded-lg border border-gray-200 w-full" />
             <img src="../assets/windtrack/power_dashboard.png" alt="WindTrack Power Dashboard" class="rounded-lg border border-gray-200 w-full" />
             <img src="../assets/windtrack/asset_graphs.png" alt="WindTrack performance graphs" class="rounded-lg border border-gray-200 w-full col-span-2" />
@@ -101,7 +113,7 @@
   </section>
 
   <!-- Industry scenarios -->
-  <section class="py-16 lg:py-20">
+  <section class="py-16 lg:py-20 section-alt">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-sm font-semibold text-swasthi-blue uppercase tracking-widest">Powered by Microsoft</p>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-swasthi-text">Industry scenarios</h2>
@@ -181,7 +193,7 @@
 
   <footer class="bg-white border-t border-gray-200 py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
         <div><img src="../assets/logo.png" alt="Swasthi" class="h-9 w-auto" /><p class="mt-3 text-sm text-gray-600 leading-relaxed">Chennai-based Microsoft Partner. Enterprise IT, AI, and cloud for three decades.</p><div class="mt-4"><img src="../assets/ms-partner-logo.jpeg" alt="Microsoft Partner" class="h-14 w-auto" /></div></div>
         <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Solutions</h4><ul class="space-y-2.5 text-sm text-gray-600">
           <li><a href="enterprise-ai-adoption.html" class="hover:text-swasthi-blue">Enterprise AI Adoption</a></li>
@@ -198,11 +210,41 @@
           <li><a href="contact.html" class="hover:text-swasthi-blue">Contact</a></li>
           <li><a href="../catalogue/catalogue-master.pdf" download class="hover:text-swasthi-blue">Service Catalogue (PDF)</a></li>
         </ul></div>
+        <!-- Legal -->
+        <div>
+          <h4 class="text-sm font-semibold text-swasthi-text mb-4">Legal</h4>
+          <ul class="space-y-2.5 text-sm text-gray-600">
+            <!-- TODO: link to actual policy pages when created -->
+            <li><a href="#" class="hover:text-swasthi-blue">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-swasthi-blue">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-swasthi-blue">Cookie Policy</a></li>
+          </ul>
+        </div>
         <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Contact</h4><ul class="space-y-2.5 text-sm text-gray-600"><li>Chennai, India</li><li><a href="mailto:info@swasthicomputers.com" class="hover:text-swasthi-blue">info@swasthicomputers.com</a></li><li><a href="tel:+919940197146" class="hover:text-swasthi-blue">Sales: +91-9940197146</a></li><li><a href="tel:+919791043399" class="hover:text-swasthi-blue">Support: +91-9791043399</a></li></ul></div>
       </div>
-      <div class="mt-10 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">&copy; 2026 Swasthi LLP. All rights reserved.</div>
+      <div class="mt-10 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <span>&copy; 2026 Swasthi LLP. All rights reserved.</span>
+        <div class="flex items-center gap-3">
+          <a href="#" class="text-gray-400 hover:text-swasthi-blue transition-colors" aria-label="LinkedIn">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-swasthi-blue transition-colors" aria-label="Twitter / X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-swasthi-blue transition-colors" aria-label="Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
+  <button id="scroll-top" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-swasthi-blue text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
   <script src="../js/main.js"></script>
 </body>
 </html>

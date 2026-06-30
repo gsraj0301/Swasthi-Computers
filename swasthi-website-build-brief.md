@@ -192,3 +192,13 @@ Surya confirmed (verbally, to Raj) that Swasthi genuinely operates as an **offsh
 
 ### 9.5 Hosting/domain — informational, no code change needed yet
 Final decision: domain will be purchased through GoDaddy (Surya's existing account); hosting stays on **Cloudflare Pages** (already deployed there). When the domain is purchased, this is a DNS-level change only — no rebuild, no code change. Flag this to Raj when it happens so the custom domain can be connected in the Cloudflare dashboard.
+
+**Update:** Surya is keeping the existing swasthicomputers.com domain (not buying .ai — too costly). He will **not** be changing nameservers, since that would risk breaking his existing email DNS records (MX/SPF/DKIM). Instead: a single CNAME record for `www.swasthicomputers.com` pointing at the Pages project, plus domain forwarding at the registrar so the bare domain redirects to `www`. This touches none of his existing DNS. No action needed from OpenCode here — this is handled directly between Raj and Surya at the registrar.
+
+### 9.6 Global Reach section — fixes required (regression on first implementation)
+The Global Reach section (hub-and-spoke map, About page + Home page compact strip) implementing Section 9.4's partner claim has two confirmed bugs to fix:
+
+1. **Wrong color used.** The implementation used `#0AA0E4`, which is not in the brand system and was incorrectly described as matching it. Replace with the actual locked colors throughout: hub/HQ node and any accent = `swasthi-gold` (#D9A23D), region nodes/connector lines = `swasthi-blue` (#1F5FA8), on the existing warm background. A corrected reference SVG was provided directly to Raj — use it as the visual source of truth for color, node styling, and label layout.
+2. **Home page version is sized as a 32×32 icon — too small to read.** Increase to a minimum ~280-320px wide on the homepage compact strip. It's fine to drop the "Headquarters" subtext there to save horizontal space if needed, but the diagram itself must stay clearly legible, not icon-sized. The About page version can keep its current larger size.
+
+**Wording fix — apply in both places it currently appears (About page Microsoft Partner section, and this new Global Reach section):** replace "certified expertise" with "deep expertise" everywhere, unless Surya has explicitly confirmed Swasthi holds actual named Microsoft certifications (he has not, as of this writing). "Certified" is a specific, checkable claim distinct from general competence — don't leave it stated twice without verification.

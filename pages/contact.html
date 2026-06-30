@@ -85,13 +85,91 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:flex lg:gap-16">
         <div class="lg:w-1/2">
-          <h2 class="text-2xl font-bold text-swasthi-text">Send us an email</h2>
-          <p class="mt-3 text-gray-600">We're ready to listen — just drop us a line and we'll get back to you promptly.</p>
-          <div class="mt-6 p-6 rounded-xl border-2 border-dashed border-swasthi-blue/30 bg-white text-center">
-            <a href="mailto:info@swasthicomputers.com" class="text-xl sm:text-2xl font-bold text-swasthi-blue hover:underline break-all">info@swasthicomputers.com</a>
-            <p class="mt-2 text-sm text-gray-500">Click to open your email client</p>
-            <button onclick="navigator.clipboard.writeText('info@swasthicomputers.com').then(() => { this.textContent='Copied!'; setTimeout(() => this.textContent='Copy email address', 2000); }).catch(() => {})" class="mt-3 text-sm font-semibold text-swasthi-blue hover:underline">Copy email address</button>
-          </div>
+          <h2 class="text-2xl font-bold text-swasthi-text">Send us a message</h2>
+          <p class="mt-3 text-gray-600">Fill in the form and we'll get back to you within one business day.</p>
+
+          <!-- TODO: Replace FORMSPREE_ENDPOINT with your actual Formspree form endpoint
+               Sign up free at https://formspree.io/register
+               Create a new form at https://formspree.io/forms
+               Copy the endpoint URL (e.g. https://formspree.io/f/abc123) and paste below -->
+          <form id="contact-form" action="https://formspree.io/f/mvzjbdon" method="POST" class="mt-6 space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="first-name" class="text-sm font-medium text-swasthi-text">First Name <span class="text-red-500">*</span></label>
+                <input type="text" id="first-name" name="first-name" required
+                  class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-swasthi-text bg-white focus:outline-none focus:ring-2 focus:ring-swasthi-blue/50 focus:border-swasthi-blue" />
+              </div>
+              <div>
+                <label for="last-name" class="text-sm font-medium text-swasthi-text">Last Name</label>
+                <input type="text" id="last-name" name="last-name"
+                  class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-swasthi-text bg-white focus:outline-none focus:ring-2 focus:ring-swasthi-blue/50 focus:border-swasthi-blue" />
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="text-sm font-medium text-swasthi-text">Work Email <span class="text-red-500">*</span></label>
+                <input type="email" id="email" name="email" required
+                  class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-swasthi-text bg-white focus:outline-none focus:ring-2 focus:ring-swasthi-blue/50 focus:border-swasthi-blue" />
+              </div>
+              <div>
+                <label for="company" class="text-sm font-medium text-swasthi-text">Company</label>
+                <input type="text" id="company" name="company"
+                  class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-swasthi-text bg-white focus:outline-none focus:ring-2 focus:ring-swasthi-blue/50 focus:border-swasthi-blue" />
+              </div>
+            </div>
+            <div>
+              <label for="service" class="text-sm font-medium text-swasthi-text">Service of Interest</label>
+              <select id="service" name="service"
+                class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-swasthi-text bg-white focus:outline-none focus:ring-2 focus:ring-swasthi-blue/50 focus:border-swasthi-blue">
+                <option value="">Select a service</option>
+                <option value="Enterprise AI Adoption">Enterprise AI Adoption</option>
+                <option value="Microsoft Copilot & Cloud">Microsoft Copilot & Cloud</option>
+                <option value="Data Engineering & Big Data">Data Engineering & Big Data</option>
+                <option value="Automation & AIOps">Automation & AIOps</option>
+                <option value="Security">Security</option>
+                <option value="Managed IT Services">Managed IT Services</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="text-sm font-medium text-swasthi-text">Message <span class="text-red-500">*</span></label>
+              <textarea id="message" name="message" rows="4" required
+                class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-swasthi-text bg-white focus:outline-none focus:ring-2 focus:ring-swasthi-blue/50 focus:border-swasthi-blue"></textarea>
+            </div>
+            <div id="form-status" class="hidden"></div>
+            <button type="submit" id="form-submit"
+              class="btn-primary px-7 py-3.5 rounded-lg text-base font-semibold w-full">
+              Submit Request
+            </button>
+          </form>
+
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', async function(e) {
+              e.preventDefault();
+              const form = e.target;
+              const status = document.getElementById('form-status');
+              const submitBtn = document.getElementById('form-submit');
+              const data = new FormData(form);
+              submitBtn.disabled = true;
+              submitBtn.textContent = 'Sending...';
+              status.className = 'hidden';
+              try {
+                const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+                if (res.ok) {
+                  status.className = 'mt-4 p-4 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm';
+                  status.textContent = 'Thank you! We\'ll be in touch within one business day.';
+                  form.reset();
+                } else {
+                  throw new Error('Form submission failed');
+                }
+              } catch (err) {
+                status.className = 'mt-4 p-4 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm';
+                status.textContent = 'Something went wrong. Please email us directly at info@swasthicomputers.com or try again.';
+              }
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Submit Request';
+            });
+          </script>
         </div>
         <div class="mt-12 lg:mt-0 lg:w-1/2">
           <h2 class="text-2xl font-bold text-swasthi-text">Other ways to reach us</h2>
@@ -132,7 +210,7 @@
 
   <footer class="bg-white border-t border-gray-200 py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
         <div><img src="../assets/logo.png" alt="Swasthi" class="h-9 w-auto" /><p class="mt-3 text-sm text-gray-600 leading-relaxed">Chennai-based Microsoft Partner. Enterprise IT, AI, and cloud for three decades.</p><div class="mt-4"><img src="../assets/ms-partner-logo.jpeg" alt="Microsoft Partner" class="h-14 w-auto" /></div></div>
         <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Solutions</h4><ul class="space-y-2.5 text-sm text-gray-600">
           <li><a href="enterprise-ai-adoption.html" class="hover:text-swasthi-blue">Enterprise AI Adoption</a></li>
@@ -149,11 +227,41 @@
           <li><a href="contact.html" class="hover:text-swasthi-blue">Contact</a></li>
           <li><a href="../catalogue/catalogue-master.pdf" download class="hover:text-swasthi-blue">Service Catalogue (PDF)</a></li>
         </ul></div>
+        <!-- Legal -->
+        <div>
+          <h4 class="text-sm font-semibold text-swasthi-text mb-4">Legal</h4>
+          <ul class="space-y-2.5 text-sm text-gray-600">
+            <!-- TODO: link to actual policy pages when created -->
+            <li><a href="#" class="hover:text-swasthi-blue">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-swasthi-blue">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-swasthi-blue">Cookie Policy</a></li>
+          </ul>
+        </div>
         <div><h4 class="text-sm font-semibold text-swasthi-text mb-4">Contact</h4><ul class="space-y-2.5 text-sm text-gray-600"><li>Chennai, India</li><li><a href="mailto:info@swasthicomputers.com" class="hover:text-swasthi-blue">info@swasthicomputers.com</a></li><li><a href="tel:+919940197146" class="hover:text-swasthi-blue">Sales: +91-9940197146</a></li><li><a href="tel:+919791043399" class="hover:text-swasthi-blue">Support: +91-9791043399</a></li></ul></div>
       </div>
-      <div class="mt-10 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">&copy; 2026 Swasthi LLP. All rights reserved.</div>
+      <div class="mt-10 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <span>&copy; 2026 Swasthi LLP. All rights reserved.</span>
+        <div class="flex items-center gap-3">
+          <a href="#" class="text-gray-400 hover:text-swasthi-blue transition-colors" aria-label="LinkedIn">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-swasthi-blue transition-colors" aria-label="Twitter / X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-swasthi-blue transition-colors" aria-label="Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
+  <button id="scroll-top" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-swasthi-blue text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
   <script src="../js/main.js"></script>
 </body>
 </html>
