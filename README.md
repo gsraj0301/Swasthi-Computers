@@ -24,10 +24,11 @@ The old site (if it existed) didn't communicate their modern AI capabilities. Th
 
 Key design decisions:
 - **Multi-page HTML** (no SPA) — each page has its own crawlable URL for SEO
-- **Warm colour palette** — blue (#1F5FA8) + gold (#D9A23D) on a warm off-white background. No dark mode, no cold navy.
-- **Avanade-inspired layout** — mega-menu nav, hero → "How we help" → CTA page rhythm
+- **Blue & white colour palette** — swasthi-blue (#0AA0E4) on clean white backgrounds
+- **Mega-menu nav** — hero → "How we help" cards → CTA page rhythm
 - **Deliverability tiers** — every capability tagged [Proven] / [Now] / [Aspire] so clients know what's ready and what's in development
 - **No fabricated testimonials** — WindTrack is the only real proof point, everything else is transparent about readiness level
+- **Scroll-triggered fade-in animations** — lightweight CSS + IntersectionObserver, no JS library
 
 ---
 
@@ -35,9 +36,15 @@ Key design decisions:
 
 - **18 HTML pages**: Home page, 6 solution pages, Industry 5.0, Use Cases, About, Contact, 7 service catalogue PDFs
 - **Hero background images** on all 6 solution pages using themed photography
-- **WindTrack case study** — live IoT wind turbine monitoring demo, with predictive MRO roadmap
+- **WindTrack case study** — redesigned with gradient metric banner, tech tags, and live dashboard link
 - **Microsoft industry scenarios** — 6 illustrative cards (Healthcare, Insurance, Banking, Professional Services, Manufacturing, Energy)
 - **Service Catalogue PDFs** — 7 professional PDFs (6 per-solution + master), generated via ReportLab, downloadable with one click
+- **Contact form** — sends to Formspree, with service of interest dropdown and async success/error states
+- **Stats strip** — "By the Numbers" real-stat section on the Home page
+- **Scroll-triggered fade-in animations** — lightweight CSS + IntersectionObserver
+- **Scroll-to-top button** — appears after scrolling past the hero
+- **Section background alternation** — white / gray-50 visual rhythm across all pages
+- **Footer with Legal column + social icons** — LinkedIn, Twitter/X, Facebook
 - **Fully responsive** — works on mobile, tablet, desktop
 - **No backend, no build step** — pure static HTML + Tailwind CDN + vanilla JS
 
@@ -53,7 +60,7 @@ Key design decisions:
 | **Fonts** | Inter (Google Fonts) |
 | **Interactivity** | Vanilla JavaScript |
 | **PDF Generation** | Python + ReportLab (`catalogue/generate_pdfs.py`) |
-| **Forms** | `mailto:` links + clipboard copy |
+| **Forms** | Formspree (async POST) |
 | **Hosting** | Ready for GitHub Pages / any static host |
 
 ---

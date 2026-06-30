@@ -160,13 +160,32 @@ Home
 
 ### Open Items (still pending):
 1. WindTrack: capacity factor realism fix (~49% → 25-35%)
-2. "Certified expertise" phrase on About page + Global Reach section — needs Surya to confirm certifications, or default to "deep expertise"
-3. Microsoft Partner logo file — the `ms-partner-logo.jpeg` was WhatsApp-compressed; needs higher-quality original
-4. WindTrack attribution (Raj vs. company) — still undecided
-5. Global Reach map SVG color fix needed (uses `#0AA0E4` instead of real brand colors from warm scheme)
-6. Surya's photo on About page — still undecided
+2. Microsoft Partner logo file — the `ms-partner-logo.jpeg` was WhatsApp-compressed; needs higher-quality original
+3. WindTrack attribution (Raj vs. company) — still undecided
+4. Surya's photo on About page — still undecided
+5. Agentic AI use-case grid on Enterprise AI Adoption page — waiting for Surya to confirm use-cases are real
+6. Replit site feedback — message drafted, awaiting Surya's response on fabricated content
 
-### GitHub
-- Repo: `github.com/gsraj0301/Swasthi-Computers`
+---
+
+### ✅ Completed (June 30, 2026) — Visual Polish Round
+
+Full SPEC in `SPEC.md`. Changes across 11 HTML files + css + js.
+
+**Round 1 — Animations & Rhythm**
+1. **Scroll animations** — CSS `.reveal`/`.visible` classes + IntersectionObserver on all key sections (hero, pillar cards, WindTrack, Global Reach, CTA). Staggered delays via `.reveal-delay-1` through `-4`.
+2. **Stats strip** — "By the Numbers" section on Home page with 4 real-stat cards (3 decades, Microsoft Partner, Chennai-based, 1 live case study). Gray-50 background.
+3. **Scroll-to-top button** — Sticky FAB on all 11 pages, appears after 500px scroll.
+4. **Section background alternation** — Cards sections across all solution pages + Industry 5.0 + Use Cases use `section-alt` (gray-50) for visual rhythm.
+
+**Round 2 — Content & Form**
+3. **WindTrack card redesign** — Gradient metric banner (100 simulated turbines, India zones) + tech tags (Python, Streamlit, Plotly, IoT) on Home, Industry 5.0, and Use Cases pages.
+4. **Contact form** — Async POST to Formspree (`mvzjbdon`) with First Name, Last Name, Work Email, Company, Service of Interest dropdown (7 options), Message. Success/error states.
+
+**Round 3 — Footer & Fixes**
+5. **Footer polish** — Added Legal column (Privacy Policy, Terms of Service, Cookie Policy — placeholder links). Added social icons row (LinkedIn, Twitter/X, Facebook) below copyright. Changed grid from `lg:grid-cols-4` to `lg:grid-cols-5`.
+6. **"certified expertise" → "deep expertise"** — Fixed in 2 places on About page (Microsoft Partner section + Global Reach section).
+
+**Removed from open items:** `#2` (certified → deep, done), `#5` (Global Reach SVG color — no longer relevant in blue/white scheme).
 - Branch: `main`
 - All files committed and pushed
